@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<marcadores>
+    <pagina_web>
+        <nombre>Real Racing Club de Santander
+        </nombre>
+        <descripcion>Página del glorioso equipo
+        </descripcion>
+        <URL>https://wwww.realracingclub.es
+        </URL>
+    </pagina_web>
+    
+    <pagina_web>
+        <nombre>Wikipedia
+        </nombre>
+        <descripcion>La enciclopedia libre
+        </descripcion>
+        <URL>https://www.wikipedia.org
+        </URL>
+    </pagina_web>
+    
+    <pagina_web>
+        <nombre>W3C
+        </nombre>
+        <descripcion>World Wide Web Consortium
+        </descripcion>
+        <URL>https://www.w3.org
+        </URL>
+    </pagina_web>
+    
+    <pagina_web>
+        <nombre>AlpeFormacion
+        </nombre>
+        <descripcion>Centro de formación Alpe
+        </descripcion>
+        <URL>https://www.alpeformacion.es
+        </URL>
+    </pagina_web>
+    
+</marcadores>
