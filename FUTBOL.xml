@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Equipos_futbol>
+    <equipo>
+        <Nombre_equipo>Real Racing Club
+        </Nombre_equipo>
+        <Ciudad_equipo>Santander
+        </Ciudad_equipo>
+        <Entrenador>Iván Ania
+        </Entrenador>
+        <plantilla>
+            <jugador posicion="portero">
+            </jugador>
+            <jugador nombre="Luca Zidane">
+            </jugador>
+            <jugador nacionalidad="Francia">
+            </jugador>
+            
+            <jugador posicion="delantero">
+            </jugador>
+            <jugador nombre="Álvaro Cejudo">
+            </jugador>
+            <jugador nacionalidad="España">
+            </jugador>
+        </plantilla>
+    </equipo>
+    
+</Equipos_futbol>
