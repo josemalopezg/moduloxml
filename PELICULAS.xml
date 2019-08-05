@@ -3,26 +3,25 @@
 <peliculas> 
     <catalogo>
         <pelicula genero = "Acción">        
-        <duracion_pelicula>88minutos</duracion_pelicula>
-        <actores>
-            <actor>Bruce Willis</actor>
-            <actor>Alan Rickman</actor>
-        </actores>
-        <fecha>30-09-1988</fecha>
-        <director>John McTiernan</director>
-        <titulo>La jungla de Cristal</titulo>            
+            <duracion_pelicula>88minutos</duracion_pelicula>
+            <actores>
+                <actor>Bruce Willis</actor>
+                <actor>Alan Rickman</actor>
+            </actores>
+            <fecha>30-09-1988</fecha>
+            <director>John McTiernan</director>
+            <titulo>La jungla de Cristal</titulo>            
         </pelicula>
         
         <pelicula genero = "Ciencia ficción">
-        <duracion_pelicula>88minutos</duracion_pelicula>
-        <actores>
-            <actor>Arnold Schwarzenegger</actor>
-            <actor>Carl Weathers</actor>
-        </actores>    
-        <fecha>12-06-1987</fecha>
-        <director>John McTiernan</director>
-        <titulo>Depredador</titulo>
+            <duracion_pelicula>88minutos</duracion_pelicula>
+            <actores>
+                <actor>Arnold Schwarzenegger</actor>
+                <actor>Carl Weathers</actor>
+            </actores>    
+            <fecha>12-06-1987</fecha>
+            <director>John McTiernan</director>
+            <titulo>Depredador</titulo>
         </pelicula>
     </catalogo>
-        
 </peliculas>
