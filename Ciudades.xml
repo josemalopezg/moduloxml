@@ -1,4 +1,12 @@
-<?xml version=1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ciudades_de_paises [ 
+    <!ELEMENT ciudades_de_paises (ciudad)*>
+    <!ELEMENT ciudad (nombre, pais)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT pais (#PCDATA)>
+    <!ATTLIST pais continente CDATA #REQUIRED>
+    <]
+ >                           ]>
  <ciudades_de_paises> 
     <ciudad>
         <nombre>Nueva_Delhi</nombre>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- XML de intercambio de catálogos para venta de choches -->
+<catalogo>
+    <coche marca="Peugeot" modelo="407 ST Confort HDI 136 4p" anno="2009" >
+        <chasis>
+            <largo unidad="mm">4676</largo>
+            <ancho unidad="mm">1811</ancho>
+            <alto unidad="mm">1455</alto>
+            <puertas>4</puertas>
+            <plazas>5</plazas>
+            <maletero unidad="l">432</maletero>
+            <deposito unidad="l">66</deposito>
+            <peso unidad="kg">1580</peso>
+        </chasis>
+        <motor tipo="diesel">
+            <!-- admite gasolina, diesel, biodiesel, alcohol, eléctrico, extensorElectrico, híbrido -->
+            <cilindros>4</cilindros>
+            <potencia unidad="cv">136</potencia>
+            <cilindrada unidad="cm^3">1997</cilindrada>
+            <emision elementos="co^2" unidad="gr/km">155</emision>
+            <velmax unidad="km/h">208</velmax>
+            <accel unidad="s" tipo="0~100km/h">9.8</accel>            
+        </motor>
+        <transmision>
+            <tipo>frontal</tipo>
+            <cambio>manual</cambio>
+            <marchas>6</marchas>
+        </transmision>
+        
+        <existencias>
+            <vehiculo matricula="5375HDJ" concesionario="Auto Gomas Santander">
+                <precio unidad="euro">8400</precio>
+                <kilometraje unidad="km">75344</kilometraje>
+                <garantia unidad="meses">12</garantia>
+                <color>gris metalizado</color>
+                <equipamiento tipo="multimedia">radio,cd</equipamiento>
+                <equipamiento tipo="aire">calefacción</equipamiento>
+            </vehiculo>
+            <vehiculo matricula="4191DTT" concesionario="coches.net">
+                <precio unidad="euro">3300</precio>
+                <kilometraje unidad="km">163047</kilometraje>
+                <garantia unidad="meses">12</garantia>
+                <color>marrón metalizado</color>
+                <equipamiento tipo="ordenador">centro multimedia, GPS, manos libres bluetooth</equipamiento>
+                <equipamiento tipo="aire">aire acondicionado</equipamiento>
+            </vehiculo>
+        </existencias>
+    </coche>
+        
+   <coche marca="BMW " modelo="Serie 1 118d 5p" anno="2018" >
+        <chasis>
+            <largo unidad="mm">4329</largo>
+            <ancho unidad="mm">1765</ancho>
+            <alto unidad="mm">1440</alto>
+            <puertas>5</puertas>
+            <plazas>5</plazas>
+            <maletero unidad="l">360</maletero>
+            <deposito unidad="l">52</deposito>
+            <peso unidad="kg">1425</peso>
+        </chasis>
+        <motor tipo="diesel">
+            <!-- admite gasolina, diesel, biodiesel, alcohol, eléctrico, extensorElectrico, híbrido -->
+            <cilindros tipo="linea">4</cilindros>
+            <potencia unidad="cv">150</potencia>
+            <cilindrada unidad="cm^3">1995</cilindrada>
+            <emision elementos="co^2" unidad="gr/km">104</emision>
+            <velmax unidad="km/h">212</velmax>
+            <accel unidad="s" tipo="0~100km/h">8.3</accel>
+        </motor>
+        <transmision>
+            <tipo>frontal</tipo>
+            <cambio>manual</cambio>
+            <marchas>6</marchas>
+        </transmision>
+       
+        <existencias>
+            <vehiculo matricula="4012KKC" concesionario="coches.net">
+                <precio unidad="euro">45900</precio>
+                <kilometraje unidad="km">26491</kilometraje>
+                <garantia unidad="meses">24</garantia>
+                <color>A83 Glaciersilber</color>
+                <equipamiento tipo="multimedia">centro multimedia, GPS, manos libres bluetooth, aparcamiento</equipamiento>
+                <equipamiento tipo="aire"></equipamiento>
+                <equipamiento tipo="asientos">tapiceria de cuero, calefacción, regulacion eléctrica</equipamiento>
+            </vehiculo>
+        </existencias>
+    </coche>    
+</catalogo>
