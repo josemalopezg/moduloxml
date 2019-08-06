@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<libreria>
+    
+    <libro>
+        <titulo>El perro de los Baskerville</titulo>
+        <autor>Arthur Conan Doyle</autor>
+        <editorial>Austral</editorial>
+        <precio>11.95€</precio> 
+        <año_publicacion>1902</año_publicacion>
+    </libro>
+
+    <libro>
+        <titulo>Carrie</titulo>
+        <autor>Stephen King</autor>
+        <editorial>Debolsillo</editorial>
+        <precio>9.45€</precio> 
+        <año_publicacion>1974</año_publicacion>
+    </libro>
+    
+    <libro>
+        <titulo>Asesinato en el Orient Express</titulo>
+        <autor>Agatha Cristie</autor>
+        <editorial>Espasa</editorial>
+        <precio>14.90€</precio>
+        <año_publicacion>1934</año_publicacion>
+    </libro>
+        
+    <libro>
+        <titulo>Los crímenes de la calle Morgue</titulo>
+        <autor>Edgar Allan Poe</autor>
+        <editorial>Colecciónclásicos</editorial>
+        <precio>8.11€</precio>
+        <año_publicacion>1841</año_publicacion>
+    </libro>
+        
+</libreria>
