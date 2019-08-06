@@ -2,7 +2,7 @@
 
 <libreria>
     
-    <libro>
+    <libro id ="li0001">
         <titulo>El perro de los Baskerville</titulo>
         <autor>Arthur Conan Doyle</autor>
         <editorial>Austral</editorial>
@@ -10,7 +10,7 @@
         <año_publicacion>1902</año_publicacion>
     </libro>
 
-    <libro>
+    <libro id ="li0012">
         <titulo>Carrie</titulo>
         <autor>Stephen King</autor>
         <editorial>Debolsillo</editorial>
@@ -18,7 +18,7 @@
         <año_publicacion>1974</año_publicacion>
     </libro>
     
-    <libro>
+    <libro id ="li0123">
         <titulo>Asesinato en el Orient Express</titulo>
         <autor>Agatha Cristie</autor>
         <editorial>Espasa</editorial>
@@ -26,7 +26,7 @@
         <año_publicacion>1934</año_publicacion>
     </libro>
         
-    <libro>
+    <libro id ="li1234">
         <titulo>Los crímenes de la calle Morgue</titulo>
         <autor>Edgar Allan Poe</autor>
         <editorial>Colecciónclásicos</editorial>
