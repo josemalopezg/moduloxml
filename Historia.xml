@@ -1,4 +1,11 @@
-<?xml version=1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hechos_historicos [ 
+    <!ELEMENT hechos_historicos (hecho)*>
+    <!ELEMENT fecha (dia, mes, año)>
+    <!ELEMENT dia (#PCDATA)>
+    <!ELEMENT mes (#PCDATA)>
+    <!ELEMENT año (#PCDATA)>
+]>
 <hechos_historicos> 
     <hecho descripcion= "IBM da a conocer el PC">
         <fecha>
@@ -8,8 +15,6 @@
         </fecha>
     </hecho>
               
-    
-    <hechos_historicos> 
     <hecho descripcion= "Se funda Google">
         <fecha>
         <dia>4</dia>
@@ -17,9 +22,7 @@
         <año>1998</año>
         </fecha>
     </hecho>
-     
-     
-     <hechos_historicos> 
+
     <hecho descripcion= "Se funda Facebook">
         <fecha>
         <dia>4</dia>
