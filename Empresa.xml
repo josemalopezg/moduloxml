@@ -3,7 +3,7 @@
     <!ELEMENT empresa (empleado)*>
     <!ELEMENT empleado (nombre, apellido+, numcontacto, email)>
     <!ELEMENT nombre (#PCDATA)>
-    <!ELEMENT apellido+ (#PCDATA)>
+    <!ELEMENT apellido (#PCDATA)>
     <!ELEMENT numcontacto (#PCDATA)>
     <!ELEMENT email (#PCDATA)>
                   ]

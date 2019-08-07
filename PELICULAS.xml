@@ -4,9 +4,9 @@
     <!ELEMENT pelicula (duracion, actores, fecha, director, titulo)>
     <!ATTLIST pelicula genero CDATA #REQUIRED>
     <!ELEMENT duracion (#PCDATA)>
-    <!ELEMENT actores (#PCDATA)>
-    <!ELEMENT fecha (#PCDATA)>
     <!ELEMENT actores (actor)*>
+    <!ELEMENT actor (#PCDATA)>
+    <!ELEMENT fecha (#PCDATA)>
     <!ELEMENT director (#PCDATA)>    
                     ]>   
 
