@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Equipos_futbol [ 
+    <!ELEMENT Equipos_futbol (equipo*)>
+    <!ELEMENT equipo (Nombre_equipo, Ciudad_equipo, Entrenador, plantilla)>
+    <!ELEMENT Nombre_equipo (#PCDATA)>
+    <!ELEMENT Ciudad_equipo (#PCDATA)>
+    <!ELEMENT Entrenador (#PCDATA)>
+    <!ELEMENT plantilla (jugador)*>
+    <!ELEMENT jugador EMPTY >
+    <!ATTLIST plantilla posicion CDATA #REQUIRED
+                        nombre   CDATA #REQUIRED
+                        nacionalidad CDATA #REQUIRED>
+]>  
 <Equipos_futbol>
     <equipo>
         <Nombre_equipo>Real Racing Club
@@ -8,19 +20,8 @@
         <Entrenador>Iván Ania
         </Entrenador>
         <plantilla>
-            <jugador posicion="portero">
-            </jugador>
-            <jugador nombre="Luca Zidane">
-            </jugador>
-            <jugador nacionalidad="Francia">
-            </jugador>
-            
-            <jugador posicion="delantero">
-            </jugador>
-            <jugador nombre="Álvaro Cejudo">
-            </jugador>
-            <jugador nacionalidad="España">
-            </jugador>
+            <jugador posicion="portero" nombre="Luca Zidane" nacionalidad="Francia">       </jugador>
+            <jugador posicion="delantero" nombre="Álvaro Cejudo" nacionalidad="España">            </jugador>
         </plantilla>
     </equipo>
     
