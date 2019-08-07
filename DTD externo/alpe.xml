@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <!DOCTYPE alpeformacion SYSTEM "alpe.dtd">
+
 <alpeformacion>
     <aula numero="1">
         <puestos>15</puestos>
