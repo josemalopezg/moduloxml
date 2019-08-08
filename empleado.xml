@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE empleado [ 
-    <!ELEMENT empleado (nombre, apellidos, dni, fijo, direccion)*>
+<!DOCTYPE empleados [
+    <!ELEMENT empleados(empleado)+>
+    <!ELEMENT empleado (nombre, apellidos, dni?, fijo?, direccion+)>
     <!ELEMENT nombre (#PCDATA)>
     <!ELEMENT apellidos (#PCDATA)>
     <!ELEMENT dni (#PCDATA)>
     <!ELEMENT fijo (#PCDATA)>
     <!ELEMENT direccion (#PCDATA)>
+
                    ]>
-<empleado>
-    <nombre></nombre>
-    <apellidos></apellidos>
-    <dni></dni>
-    <fijo></fijo>
-    <direccion></direccion>
-</empleado>
+<empleados> 
+    <empleado>
+        <nombre></nombre>
+        <apellidos></apellidos>
+        <dni></dni>
+        <fijo></fijo>
+        <direccion></direccion>
+    </empleado>
+</empleados>
