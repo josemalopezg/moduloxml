@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE libros:SYSTEM "libro.dtd">
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE libros SYSTEM "libro.dtd">
+<libros>
+    <libro>
+        <portada>
+            <titulo>El perro de San Roque</titulo>
+            <edicion>2ª</edicion>
+            <autor>
+                <nombre>Jaime</nombre>
+                <apellidos>Tepatas</apellidos>
+                <email>jaimetepatas@gmail.com</email>
+            </autor>
+            <editor>
+                <nombre>Juan</nombre>
+                <apellidos>Tonimo</apellidos>
+                <direccion>
+                    <calle>Cabestro</calle>
+                    <poblacion>Cadiz</poblacion>
+                    <provincia>Andalucia</provincia>
+                    <pais>España</pais>
+                </direccion>
+            </editor>
+        </portada>
+        <cuerpo>
+            <parte>
+                <titulo>El regreso de Sherlock Holmes</titulo>
+                <capitulo>
+                    <titulo>La casa vacía</titulo>
+                    <parrafo alinea="just">Holmes escapó de Moriarty</parrafo> 
+                    <seccion>
+                        <titulo>Holmes de incógnito</titulo>
+                        <lista tipo="num">
+                            <item>Tipos de Datos</item>
+                            <item>Variables</item>
+                            <item>Objetos</item>
+                        </lista>
+                        <sub-seccion>
+                            <titulo>Tipos de Datos</titulo>
+                            <codigo lenguaje="java">String nombreCurso = "Iniciación a Java";</codigo>
+                        </sub-seccion>
+                    </seccion>
+                </capitulo>
+                <capitulo>
+                    <titulo>Aprende Java 2</titulo>
+                    <parrafo alinea="izq">Conocimientos avanzados de Java</parrafo> 
+                </capitulo>
+                <capitulo>
+                    <titulo>Aprende C</titulo>
+                    <parrafo alinea="der">Aprende a programar en C en pocos pasos</parrafo> 
+                    <seccion>
+                        <titulo>Conceptos Básicos</titulo>
+                        <codigo lenguaje="c">printf( "Hola mundo." );</codigo>
+                        <sub-seccion>
+                            <titulo>Operadores en C</titulo>
+                            <codigo lenguaje="c">Menor que	a &lt; b </codigo>
+                        </sub-seccion>
+                    </seccion>
+                    <seccion>
+                        <titulo>Conceptos Avanzados</titulo>
+                        <lista tipo="alpha">
+                            <item>if</item>
+                            <item>switch</item>
+                            <item>while</item>
+                            <item>for</item>
+                        </lista>
+                        <sub-seccion>
+                            <titulo>if else</titulo>
+                            <codigo lenguaje="c">
+                                if ( expresión_lógica ){
+                                }else{   
+                                }
+                            </codigo>
+                        </sub-seccion>
+                    </seccion>
+                </capitulo>
+            </parte>
+        </cuerpo>
+        <contraportada>
+            <glosario>
+                <titulo>Conceptos Basicos de Programación</titulo>
+                <entrada>
+                    <titulo>Variable</titulo>
+                    <definicion>
+                        Una variable es donde se guarda (y se recupera) datos que se utilizan en un programa.
+                    </definicion>
+                </entrada>
+                <entrada>
+                    <titulo>Funciones</titulo>
+                    <definicion>
+                        Son un conjunto de instrucciones que ejecutan una tarea determinada y que hemos encapsulado en un formato estándar para que nos sea muy sencillo de manipular y reutilizar.
+                    </definicion>
+                    <definicion>
+                        Las funciones son un elemento muy utilizado en la programación. Empaquetan y ‘aíslan’ del resto del programa, una parte de código que realiza alguna tarea específica.
+                    </definicion>
+                </entrada>
+            </glosario>
+        </contraportada>
+    </libro>
+    <libro>
+        <portada>
+            <titulo>La Biblia</titulo>
+            <edicion>65ª</edicion>
+            <autor>
+                <anonimo/>
+            </autor>
+            <editor>
+                <nombre>Varios</nombre>
+                <apellidos>Varios</apellidos>
+            </editor>
+        </portada>
+        <cuerpo>
+            <capitulo>
+                <titulo>Personajes</titulo>
+                <lista tipo="rom">
+                    <item>Jesucristo</item>
+                    <item>San Juan</item>
+                    <item>San Pedro</item>
+                    <item>La Virgen María</item>
+                </lista>
+            </capitulo>
+        </cuerpo>
+    </libro>
+</libros>
