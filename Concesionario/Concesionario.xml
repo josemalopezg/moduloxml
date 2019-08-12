@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE coches SYSTEM "Concesionario.dtd">
+<coches>
+    <coche numbastidor="knight2000">
+        <carroceria>
+            <color tipo= "metalizado"></color>
+            <numpuertas>2</numpuertas>
+            <cabrio></cabrio>
+        </carroceria>
+        <motor>
+            <cilindrada>5700cm3</cilindrada>
+            <cv>325</cv>
+            <cdiesel>No existe versión diesel</cdiesel>
+            <cgasolina>String consumo urbano= "8 km/l en ciudad" </cgasolina>
+            <celectrico>Sin consumo detallado</celectrico>
+            <cmixto>9.95km/l</cmixto>
+          </motor>
+        <especificaciones>
+            <marca>Pontiac</marca>
+            <modelo>Trans AM</modelo>
+            <estado id = "nuevo"></estado>
+        </especificaciones>
+    </coche>
+</coches>
