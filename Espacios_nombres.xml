@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Instituto>
+    
+    <pas:pas xmlns:pas='http://es.peoplearesensitive.org/gente_sensible1'>
+        
+    <pas:nombre>Juanjo</pas:nombre>    
+    <pas:apellidos>Dido de la Cabeza</pas:apellidos>    
+    <pas:puesto>Loquero</pas:puesto>
+    <pas:tfno>Nokia</pas:tfno>
+    
+    </pas:pas>   
+        
+    <profes:profes xmlns:pro='http://es.profetasintierra.org/prof1'>
+    
+    <prof:nombre>Rebeca</prof:nombre>
+    <prof:apellidos>Gada del Mar</prof:apellidos>
+    <prof:asignatura>ciencias naturales</prof:asignatura>  
+    <prof:tfno>Samsung</prof:tfno>
+    
+    </profes:profes>    
+        
+    <alumno:alumno xmlns:alum='http://es.alumnoslumbreras.org/nombre_alumno1'>    
+        
+    <alum:nombre>Jaime</alum:nombre>
+    <alum:apellidos>Tepatas</alum:apellidos>
+    <alum:curso>1º preescolar</alum:curso>
+    <alum:tfno>LG Life is good</alum:tfno>    
+        
+    </alumno:alumno>    
+ 
+</Instituto>
