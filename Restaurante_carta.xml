@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE e1:ejemplo [
+<!ELEMENT e1:ejemplo (e1:carta, e2:carta)>
+    <!ATTLIST e1:ejemplo xmlns:e1 CDATA #FIXED "http://www.alpeformacion.com/ejemplo_nombres_espacio"
+<!ELEMENT e1:carta(e1:palo,e1:numero)>
+<!ELEMENT e1:palo(#PCDATA)>
+<!ELEMENT e1:numero(#PCDATA)>
+
+<!ELEMENT e2:carta (e2:carnes, e2:pescados)>
+    <!ATTLIST e2:carta xmlns:e2 CDATA #FIXED "http://www.alpeformacion.com/ejemplo_nombres_espacio"
+<!ELEMENT e2:carta (e2:carnes, e2:pescados)>
+]

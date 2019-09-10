@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE factura [
+<!ELEMENT factura (datos_empresa, datos_cliente, datos_factura)>
+<!ATTLIST n_fac ID #REQUIRED>
+<!ELEMENT datos_empresa (nombre, dir, poblacion, provincia, cif, telefono?,fax?)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT dir (#PCDATA)>
+<!ELEMENT poblacion (#PCDATA)>
+<!ATTLIST datos_empresa_cp #REQUIRED>
+<!ELEMENT provincia (#PCDATA)>
+<!ELEMENT cif (#PCDATA)>
+<!ATTLIST telefono EMPTY #FIXED>
+<!ELEMENT datos_cliente (nombre, dir, poblacion, provincia, cif, telefono)>
+<!ATTLIST n_cli ID #REQUIRED>
+<!ELEMENT datos_factura (fecha, linea*, ref, desc, cant, precio, importe, base, cuota_iva, total)>
+<!ELEMENT fecha (#PCDATA)>
+<!ELEMENT linea (#PCDATA)>
+<!ELEMENT ref (#PCDATA)>
+<!ELEMENT desc (#PCDATA)>
+<!ELEMENT cant (#PCDATA)>
+<!ELEMENT precio (#PCDATA)>
+<!ELEMENT importe (#PCDATA)>
+<!ELEMENT base (#PCDATA)>
+<!ELEMENT cuota_iva (#PCDATA)>
+<!ELEMENT total (#PCDATA)>
+                                    ]>
+
+
+

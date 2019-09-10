@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE banco [
+ <!ELEMENT banco (sucursal, codsucur,cuenta,codcuenta)>
+ <!ELEMENT sucursal (#PCDATA)>
+ <!ELEMENT codsucur (#PCDATA)>
+<!ELEMENT cuentas (domiciliacion)>
+<!ELEMENT domiciliacion (#PCDATA)>
+<!ELEMENT codcuenta (#PCDATA)>
+<!ELEMENT codigos_cuentas (codcuenta+)>
+ <!ELEMENT operaciones (operacion?, sacar_dinero, trasferencia, ingresar, ver_saldo, cancelar_cuenta)>
+ <!ATTLIST operacion ID #REQUIRED>
+  <!ELEMENT operacion EMPTY>
+ <!ELEMENT sacar_dinero (#PCDATA)>
+ <!ELEMENT trasferencia (#PCDATA)>
+ <!ELEMENT ingresar (#PCDATA)>
+ <!ELEMENT ver_saldo (#PCDATA)>
+ <!ELEMENT cancelar_cuenta (#PCDATA)>
+<!ELEMENT clientes (cliente?, nif, prestamo)>
+<!ELEMENT cliente (#PCDATA)>
+<!ELEMENT nif (#PCDATA)>
+<!ELEMENT prestamo (#PCDATA)>
+]>
+
+<banco>
+    <sucursal>
+        <codsucur>n</codsucur>
+        <cuentas>
+          <codcuenta></codcuenta>
+          <clientes>
+              <nif></nif>
+              <operaciones>
+              <operacion ID="43210">
+                  <domiciliacion></domiciliacion>
+                  <prestamo></prestamo>
+                  <sacar_dinero></sacar_dinero>
+                  <trasferencia></trasferencia>
+                  <ingresar></ingresar>
+                  <ver_saldo></ver_saldo>
+                  <cancelar_cuenta></cancelar_cuenta>
+                </operacion>
+              </operaciones>
+          </clientes>
+        </cuentas>
+    </sucursal>
+</banco>

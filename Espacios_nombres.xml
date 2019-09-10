@@ -1,19 +1,35 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Instituto>
+<!DOCTYPE pa:instituto [
+   <!ELEMENT pa:instituto (pa:pas, prof:profes, alum:alumno)>
+<!ATTLIST pa:instituto xmlns:pa CDATA #FIXED "http://es.peoplearesensitive.org/gente_sensible_pa"
+<!ATTLIST pa:instituto xmlns:prof CDATA #FIXED "http://es.peoplearesensitive.org/gente_sensible_prof"
+<!ATTLIST pa:instituto xmlns:alum CDATA #FIXED "http://es.peoplearesensitive.org/gente_sensible_alum"
+<!ATTLIST pa:instituto xmlns:alum CDATA #REQUIRED>
+<!ELEMENT pa:pas (pa:nombre, pa:apellidos, pa:puesto, pa:tfno)>
+<!ELEMENT pa:nombre(#PCDATA)>
+<!ELEMENT pa:apellidos(#PCDATA)>
+<!ELEMENT pa:puesto(#PCDATA)>
+<!ELEMENT pa:tfno(#PCDATA)>
+
+                                            ]>
+<pa:instituto pa:especialidad="ciencias">
+
     
-    <pas:pas xmlns:pas='http://es.peoplearesensitive.org/gente_sensible1'>
+    <pa:pas xmlns:pas='http://es.peoplearesensitive.org/gente_sensible1'>
         
-    <pas:nombre>Juanjo</pas:nombre>    
-    <pas:apellidos>Dido de la Cabeza</pas:apellidos>    
-    <pas:puesto>Loquero</pas:puesto>
-    <pas:tfno>Nokia</pas:tfno>
+    <pa:nombre>Juanjo</pa:nombre>    
+    <pa:apellidos>Dido de la Cabeza</pa:apellidos>    
+    <pa:puesto>Loquero</pa:puesto>
+    <pa:tfno>Nokia</pa:tfno>
     
-    </pas:pas>   
+    </pa:pas>   
+
+</pa:instituto>
         
     <profes:profes xmlns:pro='http://es.profetasintierra.org/prof1'>
     
     <prof:nombre>Rebeca</prof:nombre>
-    <prof:apellidos>Gada del Mar</prof:apellidos>
+    <prof:apellidos>Gada del Monte</prof:apellidos>
     <prof:asignatura>ciencias naturales</prof:asignatura>  
     <prof:tfno>Samsung</prof:tfno>
     
@@ -28,4 +44,4 @@
         
     </alumno:alumno>    
  
-</Instituto>
+</pa:instituto>

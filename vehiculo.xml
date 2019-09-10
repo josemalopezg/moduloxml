@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:element name="vehiculo">
+  <xs:simpleType>
+    <xs:restricition base="xs:string">
+    <xs:enumeration value="barco"/>
+    <xs:enumeration value="bicicleta"/>
+    <xs:enumeration value="coche"/>
+    <xs:enumeration value="tren"/>
+    </xs:restricition>
+  </xs:simpleType>
+</xs:element>

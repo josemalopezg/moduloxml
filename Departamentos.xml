@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!-- DTD de departamentos -->
-<!DOCTYPE departamentos> [
+<!DOCTYPE departamentos [
 <!ELEMENT departamentos (departamento+)>
 <!ELEMENT departamento (nomdept, responsable, personas)>
 <!ELEMENT nomdept (#PCDATA)>
@@ -20,10 +20,10 @@
         <personas></personas>
     </departamento>
     <responsable>
-        <nombre></nombre>
-        <apellidos></apellidos>
-        <email></email>
-        <extension></extension>
+        <nombre>Marichu</nombre>
+        <apellidos>Papitos</apellidos>
+        <email>marichupapitos@aventurera.es</email>
+        <extension>942</extension>
     <personas>
         <persona>
             <nombre>Jaime</nombre>

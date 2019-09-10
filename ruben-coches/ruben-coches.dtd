@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT catalogo (coche+)>
+<!ELEMENT coche (chasis, motor, transmision, existencias)>
+<!ATTLIST coche
+          anno CDATA #REQUIRED
+          marca CDATA #REQUIRED
+          modelo CDATA #REQUIRED>
+<!ELEMENT chasis (largo, ancho, alto, puertas, plazas, maletero, deposito, peso)>
+<!ELEMENT largo (#PCDATA)>
+<!ATTLIST largo
+          unidad CDATA #REQUIRED>
+<!ELEMENT ancho (#PCDATA)>
+<!ATTLIST ancho
+          unidad CDATA #REQUIRED>
+<!ELEMENT alto (#PCDATA)>
+<!ATTLIST alto
+          unidad CDATA #REQUIRED>
+<!ELEMENT puertas (#PCDATA)>
+<!ELEMENT plazas (#PCDATA)>
+<!ELEMENT maletero (#PCDATA)>
+<!ATTLIST maletero
+          unidad CDATA #REQUIRED>
+<!ELEMENT deposito (#PCDATA)>
+<!ATTLIST deposito
+          unidad CDATA #REQUIRED>
+<!ELEMENT peso (#PCDATA)>
+<!ATTLIST peso
+          unidad CDATA #REQUIRED>
+<!ELEMENT motor (cilindros, potencia, cilindrada, emision, velmax, accel)>
+<!ATTLIST motor
+          tipo CDATA #REQUIRED>
+<!ELEMENT cilindros (#PCDATA)>
+<!ATTLIST cilindros
+          tipo CDATA #IMPLIED>
+<!ELEMENT potencia (#PCDATA)>
+<!ATTLIST potencia
+          unidad CDATA #REQUIRED>
+<!ELEMENT cilindrada (#PCDATA)>
+<!ATTLIST cilindrada
+          unidad CDATA #REQUIRED>
+<!ELEMENT emision (#PCDATA)>
+<!ATTLIST emision
+          elementos CDATA #REQUIRED
+          unidad CDATA #REQUIRED>
+<!ELEMENT velmax (#PCDATA)>
+<!ATTLIST velmax
+          unidad CDATA #REQUIRED>
+<!ELEMENT accel (#PCDATA)>
+<!ATTLIST accel
+          tipo CDATA #REQUIRED
+          unidad CDATA #REQUIRED>
+<!ELEMENT transmision (tipo, cambio, marchas)>
+<!ELEMENT tipo (#PCDATA)>
+<!ELEMENT cambio (#PCDATA)>
+<!ELEMENT marchas (#PCDATA)>
+<!ELEMENT existencias (vehiculo+)>
+<!ELEMENT vehiculo (precio, kilometraje, garantia, color, equipamiento+)>
+<!ATTLIST vehiculo
+          concesionario CDATA #REQUIRED
+          matricula CDATA #REQUIRED>
+<!ELEMENT precio (#PCDATA)>
+<!ATTLIST precio
+          unidad CDATA #REQUIRED>
+<!ELEMENT kilometraje (#PCDATA)>
+<!ATTLIST kilometraje
+          unidad CDATA #REQUIRED>
+<!ELEMENT garantia (#PCDATA)>
+<!ATTLIST garantia
+          unidad CDATA #REQUIRED>
+<!ELEMENT color (#PCDATA)>
+<!ELEMENT equipamiento (#PCDATA)>
+<!ATTLIST equipamiento
+          tipo CDATA #REQUIRED>

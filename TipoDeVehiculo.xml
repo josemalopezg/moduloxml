@@ -1,0 +1,26 @@
+﻿<!-- Dada la siguiente definición-->
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:element name="vehiculo">
+  <xs:simpleType>
+    <xs:restriction base="xs:string">
+    <xs:enumeration value="barco"/>
+    <xs:enumeration value="bicicleta"/>
+    <xs:enumeration value="coche"/>
+    <xs:enumeration value="tren"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:element>
+
+<!-- De que otro modo se puede definir el elemento "vehículo" y un xs:simpleType llamado tipoDeVehiculo que restringiese a "barco",
+"bicicleta", "coche" y "tren" como los únicos valores aceptables para el vehículo, de forma que dicho tipo pudiera ser también usado por
+otros elementos-->
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:element name="vehiculo" type="tipoDeVehiculo"/>
+<xs:simpleType name="tipoDeVehiculo">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="barco"/>
+    <xs:enumeration value="bicicleta"/>
+    <xs:enumeration value="coche"/>
+    <xs:enumeration value="tren"/>
+  </xs:restriction>
+</xs:simpleType>
