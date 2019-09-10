@@ -3,7 +3,7 @@
   <xs:element name="faq">
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="info"/>
+        <xs:element ref="info" minOccurs="1" maxOccurs="1"/>
         <xs:element ref="part"/>
       </xs:sequence>
     </xs:complexType>
