@@ -4,7 +4,7 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element ref="info" minOccurs="1" maxOccurs="1"/>
-        <xs:element ref="part"/>
+        <xs:element ref="part" minOccurs="1" maxOccurs="unbounded/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
