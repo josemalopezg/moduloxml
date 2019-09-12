@@ -3,9 +3,10 @@
   <xs:element name="pagos">
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="nombre" type="xs:string"/>
+        <xs:element name="nombre" type="xs:string" minOccurs="1" maxOccurs="3"/>
+          <xs:attribute name="dni" type="xs:string" use="required"/>
         <xs:element name="fechaNacimiento" type="xs:string"/>
-        <xs:element name="hora" type="xs:string"/>
+        <xs:element name="hora" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
         <xs:element name="precio" type="xs:string"/>
         <xs:element name="cantidad" type="xs:string"/>
         <xs:element name="pagado" type="xs:string"/>
