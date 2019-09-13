@@ -1,29 +1,128 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
-  <xs:element name="discos">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="grupo"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="grupo">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element name="nombre" type="xs:string"/>
-        <xs:element name="miembro" type="xs:string"/>
-        <xs:element name="nacionalidad" type="xs:string"/>
-        <xs:element name="web" type="xs:string"/>
-        <xs:element ref="email"/>
-      </xs:sequence>
-      <xs:attribute name="nom" type="xs:string" use="required"/>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="email">
-    <xs:complexType mixed="true">
-      <xs:sequence minOccurs="0">
-        <xs:element ref="email" minOccurs="0"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
+<xs:element name="discos" type="tipodisco">
+<xs:key name="clavegrupo">
+<xs:selector xpath="grupo"></xs:selector>
+<xs:field xpath="@nom"></xs:field>
+</xs:key>
+
+<xs:keyref refer="clavegrupo" name="fordisco">
+<xs:selector xpath="disco/interprete"></xs:selector>
+<xs:field xpath="@nom"></xs:field>
+</xs:keyref>
+</xs:element>
+
+<xs:complexType name="tipodisco">
+<xs:sequence>
+<xs:element name="grupo" type="tipogrupo" maxOccurs="unbounded"/>
+<xs:element name="disco" type="tipodiscos" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tipogrupo">
+<xs:sequence>
+<xs:element name="nombre" type="tipo50"/>
+<xs:element name="miembro" maxOccurs="unbounded" type="tipo50"/>
+<xs:element name="nacionalidad" minOccurs="0" type="tipo50"/>
+<xs:choice minOccurs="0">
+<xs:sequence>
+<xs:element name="web" type="tipoWeb" />
+<xs:element name="email" type="tipoEmail" />
+</xs:sequence>
+<xs:sequence>
+<xs:element name="calle" type="tipo50" />
+<xs:element name="localidad" type="tipo50" />
+</xs:sequence>
+</xs:choice>
+</xs:sequence>
+<xs:attribute name="nom" type="xs:string" use="required"/>
+</xs:complexType>
+
+<xs:complexType name="tipodiscos">
+<xs:sequence>
+<xs:element name="interprete" type="tipointerprete"/>
+<xs:element name="titulo" type="tipo50"/>
+<xs:element name="discografica" minOccurs="0" type="tipodiscografica" default="Cbs"/>
+<xs:element name="anio" type="tipoanio"/>
+<xs:element name="stock" type="tipostock"/>
+</xs:sequence>
+<xs:attribute name="precio" type="tipoprecio" use="required"/>
+</xs:complexType>
+<xs:complexType name="tipointerprete">
+<xs:attribute name="nom" type="xs:string" use="required"/>
+</xs:complexType>
+
+<xs:complexType name="tipoanio">
+<xs:simpleContent>
+<xs:extension base="patronanio">
+<xs:attribute name="mes" type="xs:string" use="optional"/>
+</xs:extension>
+</xs:simpleContent>
+
+</xs:complexType>
+
+<xs:simpleType name="tipoprecio">
+<xs:restriction base="xs:string">
+<xs:pattern value="\d+.\d{2}"></xs:pattern>
+</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="tipo50">
+<xs:restriction base="xs:string">
+<xs:maxLength value="50" />
+</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="tipoWeb">
+<xs:restriction base="xs:string">
+<xs:pattern value="www.ponprecioamimusica.org/[a-z]+" />
+</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="tipoEmail">
+<xs:restriction base="xs:string">
+<xs:pattern value="[a-z][\w_.]+@ponprecioamimusica.org" />
+</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="patronanio">
+<xs:restriction base="xs:string">
+<xs:pattern value="\d{4}"/>
+</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="tipostock">
+<xs:restriction base="xs:integer">
+<xs:minInclusive value="0" />
+<xs:maxInclusive value="200" />
+</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="tipomes">
+<xs:restriction base="xs:string">
+<xs:enumeration value="enero"/>
+<xs:enumeration value="febrero"/>
+<xs:enumeration value="marzo"/>
+<xs:enumeration value="abril"/>
+<xs:enumeration value="mayo"/>
+<xs:enumeration value="junio"/>
+<xs:enumeration value="julio"/>
+<xs:enumeration value="agosto"/>
+<xs:enumeration value="septiembre"/>
+<xs:enumeration value="octubre"/>
+<xs:enumeration value="noviembre"/>
+<xs:enumeration value="diciembre"/>
+</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="tipodiscografica">
+<xs:restriction base="xs:string">
+<xs:enumeration value="Cbs"/>
+<xs:enumeration value="Sony"/>
+<xs:enumeration value="SIRE"/>
+<xs:enumeration value="Otras"/>
+</xs:restriction>
+</xs:simpleType>
+
+
 </xs:schema>
