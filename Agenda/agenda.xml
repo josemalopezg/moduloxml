@@ -1,0 +1,15 @@
+﻿<?xml version="1.0"?>
+       <!DOCTYPE agenda SYSTEM "agenda.dtd">
+       <agenda>
+
+       <persona id="ricardo">
+       <nombre>Ricardo Borriquero</nombre>
+       <tlf>951345678</tlf>
+       </persona>
+
+       <persona id="eva">
+       <nombre>Eva Risto</nombre>
+       <tlf>955837659</tlf>
+       </persona>
+
+       </agenda>

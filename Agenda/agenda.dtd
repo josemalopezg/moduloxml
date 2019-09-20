@@ -1,5 +1,6 @@
-<!ELEMENT agenda (persona)+>
-<!ELEMENT persona (nombre, tlf)
-<!ATTLIST persona id #REQUIRED>
-<!ELEMENT nombre (#PCDATA)>
-<!ELEMENT tlf (#PCDATA)>
+<?xml encoding="UTF-8"?>
+       <!ELEMENT agenda (persona)+>
+       <!ELEMENT persona (nombre, tlf)>
+       <!ATTLIST persona id ID #REQUIRED>
+       <!ELEMENT nombre (#PCDATA)>
+       <!ELEMENT tlf (#PCDATA)>
