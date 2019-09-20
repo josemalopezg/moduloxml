@@ -1,5 +1,4 @@
- [ 
-    <!ELEMENT alpeformacion (aula)*>
+     <!ELEMENT alpeformacion (aula)*>
     <!ELEMENT aula (puesto, aireacondicionado?, certificado*)>
     <!ELEMENT aula (#PCDATA)>
     <!ELEMENT puesto (#PCDATA)>
