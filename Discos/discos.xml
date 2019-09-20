@@ -1,78 +1,60 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
-<xs:element name="discos" type="tipodiscos"/>
-<xs:complexType name="tipodiscos">
-<xs:element name="grupo" maxOccurs="unbounded"/>
-<xs:element name="discos" maxOccurs="unbounded"/>
-</xs:complexType>
-<xs:complexType >
-<xs:element name="nombre" type="xs:string"/>
-<xs:element name="miembro" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
-<xs:element name="nacionalidad" type="xs:string" minOccurs="0" maxOccurs="1"/>
-<xs:element name="web" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
-<xs:element name="email" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
-<xs:element name="calle" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
-<xs:element name="localidad" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
-<xs:choice>
-<xs:element name="pagina_web" type="xs:string" minOccurs="0"/>
-<xs:element name="correo" type="xs:string" minOccurs="0"/>
-<xs:element name="CP" type="xs:string" minOccurs="0"/>
-<xs:complexType>
-<xs:element name="calle" type="xs:string"/>
-<xs:element name="localidad" type="xs:string"/>
-</xs:complexType>
-</xs:choice>
-<xs:attribute name="nom" type="xs:string"/>
-</xs:complexType>
-
-
-<xs:complexType name="tipodiscos">
-<xs:element name="interprete" type="xs:string"/>
-<xs:attribute name="nom" type="xs:string"/>
-<xs:element name="titulo" type="xs:string"/>
-<xs:element name="discografica" type="xs:string" minOccurs="0"/>
-<xs:choice default="CBS">
-<xs:element name="SONY" type="xs:string"/>
-<xs:element name="CBS" type="xs:string"/>
-<xs:element name="SIRE" type="xs:string"/>
-<xs:element name="OTRAS" type="xs:string"/>
-</xs:choice>
-<xs:element name="anio" type="xs:string"/>
-</xs:complexType>
-<xs:simpleType ><!-- te falta nombre-->
-<xs:restiction base="xs:string">
-<xs:totalDigits value="4"/>
-</xs:restiction>
-</xs:simpleType>
-<xs:simpleType name="tipodiscos">
-<xs:restriction base="xs:string" minOccurs="0">
-<xs:enumeration value="Enero" type="xs:string"/>
-<xs:enumeration value="Febrero" type="xs:string"/>
-<xs:enumeration value="Marzo" type="xs:string"/>
-<xs:enumeration value="Abril" type="xs:string"/>
-<xs:enumeration value="Mayo" type="xs:string"/>
-<xs:enumeration value="Junio" type="xs:string"/>
-<xs:enumeration value="Julio" type="xs:string"/>
-<xs:enumeration value="Agosto" type="xs:string"/>
-<xs:enumeration value="Septiembre" type="xs:string"/>
-<xs:enumeration value="Octubre" type="xs:string"/>
-<xs:enumeration value="Noviembre" type="xs:string"/>
-<xs:enumeration value="Diciembre" type="xs:string"/>
-</xs:restriction>
-</xs:simpleType>
-<xs:element name="stock" type="xs:string"/>
-<xs:simpleType name="anio" type="xs:string"/>
-<xs:restriction base="xs:string">
-<xs:minInclusive value="0"/>
-<xs:minExclusive value="200"/>
-</xs:restriction>
-
-
-
-<xs:simpleType name="anio" type="xs:string"/>
-<xs:restriction base="xs:string">
-<xs:fraction value="2"/>
-</xs:restriction>
-
-
-</xs:schema>
+<discos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:noNamespaceSchemaLocation="discos.xsd">
+  <grupo nom="muse">
+    <nombre>MUSE</nombre>
+    <miembro>Matthew Bellamy</miembro>
+    <miembro>Dominic Howard</miembro>
+    <miembro>Chris Wolstenholme</miembro>
+    <nacionalidad>Alemania</nacionalidad>
+    <web>www.ponprecioamimusica.org/muse</web>
+    <email> midireccion@ponprecioamimusica.org</email>
+  </grupo>
+  <grupo nom="feeder">
+    <nombre>FEEDER</nombre>
+    <miembro>Grant Nicholas</miembro>
+    <miembro>Taka Hirose</miembro>
+    <miembro>Jon Henry Lee</miembro>
+    <calle>Calle no existe n2</calle>
+    <localidad>tampoco existe</localidad>
+  </grupo>
+  <grupo nom="nvnud">
+    <nombre>No vendo ni un disco</nombre>
+    <miembro>Marta</miembro>
+    <miembro>Ramon</miembro>
+    <miembro>Pedro</miembro>
+  </grupo>
+  <disco precio="12.80">
+    <interprete nom="muse"/>
+    <titulo>Showbiz</titulo>
+    <discografica>Sony</discografica>
+    <anio>2000</anio>
+    <stock>20</stock>
+  </disco>
+  <disco precio="19.90">
+    <interprete nom="feeder"/>
+    <titulo>Echo Park</titulo>
+    <discografica>Sony</discografica>
+    <anio>1980</anio>
+    <stock>5</stock>
+  </disco>
+  <disco precio="15.50">
+    <interprete nom="muse"/>
+    <titulo>Origin of symmetry</titulo>
+    <discografica>SIRE</discografica>
+    <anio mes="enero">2007</anio>
+    <stock>20</stock>
+  </disco>
+  <disco precio="13.20">
+    <interprete nom="feeder"/>
+    <titulo>Comfort In Sound</titulo>
+    <anio>2010</anio>
+    <stock>27</stock>
+  </disco>
+  <disco precio="4.90">
+    <interprete nom="nvnud"/>
+    <titulo>Esto suena realmente mal</titulo>
+    <anio>2011</anio>
+    <stock>200</stock>
+  </disco>
+</discos>
