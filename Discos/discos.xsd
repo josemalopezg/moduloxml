@@ -60,7 +60,8 @@
 </xs:simpleContent>
 
 </xs:complexType>
-
+<!-- tipos simples-->
+<!-- un digito con dos decimales-->
 <xs:simpleType name="tipoprecio">
 <xs:restriction base="xs:string">
 <xs:pattern value="\d+.\d{2}"></xs:pattern>
@@ -72,25 +73,25 @@
 <xs:maxLength value="50" />
 </xs:restriction>
 </xs:simpleType>
-
+<!-- web con patron y letras mayusculas-->
 <xs:simpleType name="tipoWeb">
 <xs:restriction base="xs:string">
 <xs:pattern value="www.ponprecioamimusica.org/[a-z]+" />
 </xs:restriction>
 </xs:simpleType>
-
+<!-- email con patron de direccion-->
 <xs:simpleType name="tipoEmail">
 <xs:restriction base="xs:string">
 <xs:pattern value="[a-z][\w_.]+@ponprecioamimusica.org" />
 </xs:restriction>
 </xs:simpleType>
-
+<!-- año con digitos-->
 <xs:simpleType name="patronanio">
 <xs:restriction base="xs:string">
 <xs:pattern value="\d{4}"/>
 </xs:restriction>
 </xs:simpleType>
-
+<!-- minimo 0 maximo 200-->
 <xs:simpleType name="tipostock">
 <xs:restriction base="xs:integer">
 <xs:minInclusive value="0" />
@@ -114,7 +115,7 @@
 <xs:enumeration value="diciembre"/>
 </xs:restriction>
 </xs:simpleType>
-
+<!-- enumeracion discografica-->
 <xs:simpleType name="tipodiscografica">
 <xs:restriction base="xs:string">
 <xs:enumeration value="Cbs"/>
