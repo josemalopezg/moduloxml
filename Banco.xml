@@ -1,45 +1,83 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE banco [
- <!ELEMENT banco (sucursal, codsucur,cuenta,codcuenta)>
- <!ELEMENT sucursal (#PCDATA)>
- <!ELEMENT codsucur (#PCDATA)>
-<!ELEMENT cuentas (domiciliacion)>
-<!ELEMENT domiciliacion (#PCDATA)>
-<!ELEMENT codcuenta (#PCDATA)>
-<!ELEMENT codigos_cuentas (codcuenta+)>
- <!ELEMENT operaciones (operacion?, sacar_dinero, trasferencia, ingresar, ver_saldo, cancelar_cuenta)>
- <!ATTLIST operacion ID #REQUIRED>
-  <!ELEMENT operacion EMPTY>
- <!ELEMENT sacar_dinero (#PCDATA)>
- <!ELEMENT trasferencia (#PCDATA)>
- <!ELEMENT ingresar (#PCDATA)>
- <!ELEMENT ver_saldo (#PCDATA)>
- <!ELEMENT cancelar_cuenta (#PCDATA)>
-<!ELEMENT clientes (cliente?, nif, prestamo)>
-<!ELEMENT cliente (#PCDATA)>
-<!ELEMENT nif (#PCDATA)>
-<!ELEMENT prestamo (#PCDATA)>
+  <!ELEMENT banco (sucursal+)>
+  <!ELEMENT sucursal (pr:prestamos, cuenta+)>
+  <!ATTLIST sucursal codigo CDATA #REQUIRED>
+  <!ATTLIST pr:prestamos xmlns:pr CDATA #FIXED "http://www.bancotansander.es/espacio_nombres/prestamos">
+  <!ELEMENT pr:prestamos (pr:prestamo+)>
+  <!ELEMENT pr:prestamo (pr:idcliente, pr:concepto)>
+  <!ATTLIST pr:prestamo pr:valor CDATA #REQUIRED>
+  <!ELEMENT pr:idcliente (#PCDATA)>
+  <!ELEMENT pr:concepto (#PCDATA)>
+  <!ELEMENT cuenta (cli:cliente+, dom:domiciliacion+)>
+  <!ATTLIST cuenta codigo CDATA #REQUIRED>
+  <!ATTLIST cli:cliente xmlns:cli CDATA #FIXED "http://www.bancotansander.es/espacio_nombres/clientes">
+  <!ATTLIST dom:domiciliacion xmlns:dom CDATA #FIXED "http://www.bancotansander.es/espacio_nombres/domiciliaciones">
+  <!ELEMENT cli:cliente (cli:nombre, cli:apellidos, cli:telefono, cli:direccion, cli:operaciones, cli:privilegio+)>
+  <!ATTLIST cli:cliente cli:nif NMTOKEN #REQUIRED>
+  <!ELEMENT cli:nombre (#PCDATA)>
+  <!ELEMENT cli:apellidos (#PCDATA)>
+  <!ELEMENT cli:telefono (#PCDATA)>
+  <!ELEMENT cli:direccion (cli:calle, cli:numero, cli:piso, cli:puerta, cli:ciudad)>
+  <!ELEMENT cli:calle (#PCDATA)>
+  <!ATTLIST cli:calle cli:tipo CDATA #REQUIRED>
+  <!ELEMENT cli:numero (#PCDATA)>
+  <!ELEMENT cli:piso (#PCDATA)>
+  <!ELEMENT cli:puerta (#PCDATA)>
+  <!ELEMENT cli:ciudad (#PCDATA)>
+  <!ELEMENT cli:operaciones (cli:operacion+)>
+  <!ELEMENT cli:operacion (cli:concepto)>
+  <!ATTLIST cli:operacion cli:importe CDATA #REQUIRED>
+  <!ELEMENT cli:concepto (#PCDATA)>
+  <!ELEMENT cli:privilegio (#PCDATA)>
+  <!ELEMENT dom:domiciliacion (dom:concepto)>
+  <!ATTLIST dom:domiciliacion dom:importe CDATA #REQUIRED>
+  <!ELEMENT dom:concepto (#PCDATA)>
 ]>
-
 <banco>
-    <sucursal>
-        <codsucur>n</codsucur>
-        <cuentas>
-          <codcuenta></codcuenta>
-          <clientes>
-              <nif></nif>
-              <operaciones>
-              <operacion ID="43210">
-                  <domiciliacion></domiciliacion>
-                  <prestamo></prestamo>
-                  <sacar_dinero></sacar_dinero>
-                  <trasferencia></trasferencia>
-                  <ingresar></ingresar>
-                  <ver_saldo></ver_saldo>
-                  <cancelar_cuenta></cancelar_cuenta>
-                </operacion>
-              </operaciones>
-          </clientes>
-        </cuentas>
-    </sucursal>
+  <sucursal codigo="49">
+    <pr:prestamos>
+      <pr:prestamo pr:valor="15.000 €">
+        <pr:idcliente>23</pr:idcliente>
+        <pr:concepto>Comprar un coche</pr:concepto>
+      </pr:prestamo>
+      <pr:prestamo pr:valor="70.000 €">
+        <pr:idcliente>7</pr:idcliente>
+        <pr:concepto>Compra de piso</pr:concepto>
+      </pr:prestamo>
+    </pr:prestamos>
+    <cuenta codigo="23782378">
+      <cli:cliente cli:nif="14526875D">
+        <cli:nombre>Juan</cli:nombre>
+        <cli:apellidos>Sainz López</cli:apellidos>
+        <cli:telefono>698523417</cli:telefono>
+        <cli:direccion>
+         <cli:calle cli:tipo="Calle">Calvo Sotelo</cli:calle>
+         <cli:numero>12</cli:numero>
+         <cli:piso>4</cli:piso>
+         <cli:puerta>D</cli:puerta>
+         <cli:ciudad>Santander</cli:ciudad>
+        </cli:direccion>
+        <cli:operaciones>
+          <cli:operacion cli:importe="90 €">
+            <cli:concepto>Transferencia Viaje</cli:concepto>
+          </cli:operacion>
+          <cli:operacion cli:importe="50 €">
+            <cli:concepto>Pago Multa</cli:concepto>
+          </cli:operacion>
+        </cli:operaciones>
+        <cli:privilegio>Compras Online</cli:privilegio>
+        <cli:privilegio>Tarjeta de Credito</cli:privilegio>
+      </cli:cliente>
+      <dom:domiciliacion dom:importe="100 €">
+        <dom:concepto>Comunidad</dom:concepto>
+      </dom:domiciliacion>
+      <dom:domiciliacion dom:importe="60 €">
+        <dom:concepto>Luz y Agua</dom:concepto>
+      </dom:domiciliacion>
+      <dom:domiciliacion dom:importe="55 €">
+        <dom:concepto>Teléfono</dom:concepto>
+      </dom:domiciliacion>
+    </cuenta>
+  </sucursal>
 </banco>

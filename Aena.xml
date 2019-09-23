@@ -1,45 +1,41 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE Ae:Aena [
-   <!ELEMENT Ae:Aena (Ae:aerop, Ae:operads)>
-    <!ATTLIST Ae:aerop xmlns:Ae CDATA #FIXED
-    "http://es.organizaena.org/aeropuerto">
-     <!ELEMENT Ae:aerop (#PCDATA)>
-     <!ELEMENT Ae:aerop (nombre, vuelos, fecha)>
-                <!ELEMENT nombre (#PCDATA)>
-                <!ELEMENT vuelos (vuelo+)>
-                    <!ELEMENT vuelo (diario?, origen, destino, horasalida, horallegada)>
-                        <!ATTLIST vuelo codigo ID #REQUIRED>
-                        <!ATTLIST vuelo estado (C | E | R) "E">
-                <!ELEMENT fecha (#PCDATA)>
-                   <!ELEMENT diario EMPTY>
-                   <!ELEMENT origen (#PCDATA)>
-                   <!ELEMENT destino (#PCDATA)>
-                   <!ELEMENT horasalida (#PCDATA)>
-                   <!ELEMENT horallegada (#PCDATA)>
-     <!ELEMENT Ae:operads (#PCDATA)>
-     <!ELEMENT Ae:operads (Ae:operador+)>
-        <!ATTLIST Ae:aerop xmlns:Ae CDATA #FIXED
-         "http://es.operadoresaena.org/compañ_aerea_operads">
-          <!ELEMENT Ae:operador (#PCDATA)>
-          <!ELEMENT Ae:operador(nombre, origen, destino)>
-                 
-                                       ]>
+<!DOCTYPE aeropuerto [
+  <!ELEMENT aeropuerto (nombre, vuelos, fecha)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT vuelos (vuelo+)>
+      <!ELEMENT vuelo (diario?, origen, destino, horasalida, horallegada)>
+        <!ATTLIST vuelo codigo ID #REQUIRED>
+        <!ATTLIST vuelo estado (C | E | R) "E">
+        <!ELEMENT diario EMPTY>
+        <!ELEMENT origen (#PCDATA)>
+        <!ELEMENT destino (#PCDATA)>
+        <!ELEMENT horasalida (#PCDATA)>
+        <!ELEMENT horallegada (#PCDATA)>
+    <!ELEMENT fecha (dia, mes, anio)>
+      <!ELEMENT dia (#PCDATA)>
+      <!ELEMENT mes (#PCDATA)>
+      <!ELEMENT anio (#PCDATA)>
+]>
 <aeropuerto>
-   <nombre>JFK</nombre>
-   <vuelos>
-      <vuelo codigo="V22" estado="R">
-         <diario />
-         <origen>New York</origen>
-         <destino>Chicago</destino>
-         <horasalida>9:30</horasalida>
-         <horallegada>11:30</horallegada>
-      </vuelo>
-      <vuelo codigo="V23" estado="C">
-         <origen>New York</origen>
-         <destino>Miami</destino>
-         <horasalida>10:15</horasalida>
-         <horallegada>11:15</horallegada>
-      </vuelo>
-   </vuelos>
-   <fecha>20/12/2013</fecha>
+  <nombre>Aeropuerto JFK</nombre>
+  <vuelos>
+    <vuelo codigo="V22" estado="R">
+      <diario/>
+      <origen>New York</origen>
+      <destino>Chicago</destino>
+      <horasalida>9:30</horasalida>
+      <horallegada>11:30</horallegada>
+    </vuelo>
+    <vuelo codigo="V23" estado="C">
+      <origen>New York</origen>
+      <destino>Miami</destino>
+      <horasalida>10:15</horasalida>
+      <horallegada>11:15</horallegada>
+    </vuelo>
+  </vuelos>
+  <fecha>
+    <dia>20</dia>
+    <mes>12</mes>
+    <anio>2013</anio>
+  </fecha>
 </aeropuerto>

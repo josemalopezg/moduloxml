@@ -1,59 +1,48 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CDS_en_oferta>
-    
-    <cd1>
-        <titulo_disco>Still got the blues</titulo_disco>
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<cds>
+    <cd titulo="Still got the blues">
         <artista>Gary Moore</artista>
         <pais>UK</pais>
-        <compañia_discografica>Big Willie style</compañia_discografica>
+        <compañia_discografica>Virgin Records</compañia_discografica>
         <precio>10.20</precio>
-        <año_publicacion>1990</año_publicacion>
-    </cd1>
-    
-    <cd2>
-        <titulo_disco>One night only</titulo_disco>
+        <anio_publicacion>1990</anio_publicacion>
+    </cd>
+    <cd titulo="One night only">
         <artista>Bee Gees</artista>
         <pais>UK</pais>
         <compañia_discografica>Polydor</compañia_discografica>
         <precio>10.90</precio>
-        <año_publicacion>1998</año_publicacion>
-    </cd2>
-        
-     <cd3>
-        <titulo_disco>When a man loves a woman</titulo_disco>
+        <anio_publicacion>1998</anio_publicacion>
+    </cd>
+    <cd titulo="When a man loves a woman">
         <artista>Percy Sledge</artista>
         <pais>USA</pais>
         <compañia_discografica>Atlantic</compañia_discografica>
         <precio>8.70</precio>
-        <año_publicacion>1987</año_publicacion>
-    </cd3>
-    
-    <cd4>
-        <titulo_disco>Big Willie style</titulo_disco>
+        <anio_publicacion>1987</anio_publicacion>
+    </cd>
+    <cd titulo="Big Willie style">
         <artista>Will Smith</artista>
         <pais>USA</pais>
         <compañia_discografica>Columbia</compañia_discografica>
         <precio>9.90</precio>
-        <año_publicacion>1997</año_publicacion>
-    </cd4>
-    
-    <cd5>
-        <titulo_disco>La canción de Juan Perro</titulo_disco>
+        <anio_publicacion>1997</anio_publicacion>
+    </cd>
+    <cd titulo="La canción de Juan Perro">
         <artista>Radio Futura</artista>
         <pais>España</pais>
-        <compañia_discografica>Sony_Music-Ariola</compañia_discografica>
+        <compañia_discografica>Sony Music-Ariola</compañia_discografica>
         <precio>9.90</precio>
-        <año_publicacion>1987</año_publicacion>
-    </cd5>
-        
-    <cd6>
-        <titulo_disco>The dock of the bay</titulo_disco>
+        <anio_publicacion>1987</anio_publicacion>
+    </cd>
+    <cd titulo="The dock of the bay">
         <artista>Otis Redding</artista>
         <pais>USA</pais>
         <compañia_discografica>Atlantic</compañia_discografica>
         <precio>7.90</precio>
-        <año_publicacion>1987</año_publicacion>
-    </cd6>
+        <anio_publicacion>1987</anio_publicacion>
+    </cd>
+</cds>
    
     
     
@@ -68,4 +57,3 @@
 
 
 
-</CDS_en_oferta>

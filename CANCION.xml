@@ -1,1 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+
+    <cancion>
+        <duracion></duracion>
+        <anio></anio>
+        <titulo></titulo>
+        <compositores>
+            <compositor>
+                <nombre></nombre>
+                <apellidos></apellidos>
+            </compositor>
+        </compositores>
+        <productores>
+            <productor>
+                <nombre></nombre>
+                <apellido></apellido>
+            </productor>
+        </productores>
+        <sello></sello>
+        <interprete></interprete>
+    </cancion>

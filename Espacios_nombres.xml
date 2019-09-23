@@ -1,47 +1,43 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pa:instituto [
-   <!ELEMENT pa:instituto (pa:pas, prof:profes, alum:alumno)>
-<!ATTLIST pa:instituto xmlns:pa CDATA #FIXED "http://es.peoplearesensitive.org/gente_sensible_pa"
-<!ATTLIST pa:instituto xmlns:prof CDATA #FIXED "http://es.peoplearesensitive.org/gente_sensible_prof"
-<!ATTLIST pa:instituto xmlns:alum CDATA #FIXED "http://es.peoplearesensitive.org/gente_sensible_alum"
-<!ATTLIST pa:instituto xmlns:alum CDATA #REQUIRED>
-<!ELEMENT pa:pas (pa:nombre, pa:apellidos, pa:puesto, pa:tfno)>
-<!ELEMENT pa:nombre(#PCDATA)>
-<!ELEMENT pa:apellidos(#PCDATA)>
-<!ELEMENT pa:puesto(#PCDATA)>
-<!ELEMENT pa:tfno(#PCDATA)>
-
-                                            ]>
+  <!ELEMENT pa:instituto (pa:pas, pro:profesor, alu:alumno)*>
+    <!ATTLIST pa:instituto xmlns:pa CDATA #FIXED "http://www.alpeformacion.es/espacio_nombres/pas">
+    <!ATTLIST pa:instituto xmlns:pro CDATA #FIXED "http://www.alpeformacion.es/espacio_nombres/profesor">
+    <!ATTLIST pa:instituto xmlns:alu CDATA #FIXED "http://www.alpeformacion.es/espacio_nombres/alumno">
+    <!ATTLIST pa:instituto pa:especialidad CDATA #REQUIRED>
+  <!ELEMENT pa:pas (pa:nombre, pa:apellidos, pa:puesto, pa:telefono)>
+  <!ELEMENT pa:nombre (#PCDATA)>
+  <!ELEMENT pa:apellidos (#PCDATA)>
+  <!ELEMENT pa:puesto (#PCDATA)>
+  <!ELEMENT pa:telefono (#PCDATA)>
+  <!ELEMENT pro:profesor (pro:nombre, pro:apellidos, pro:asignatura, pro:telefono)>
+  <!ELEMENT pro:nombre (#PCDATA)>
+  <!ELEMENT pro:apellidos (#PCDATA)>
+  <!ELEMENT pro:asignatura (#PCDATA)>
+  <!ELEMENT pro:telefono (#PCDATA)>
+  <!ELEMENT alu:alumno (alu:nombre, alu:apellidos, alu:curso, alu:telefono)>
+  <!ELEMENT alu:nombre (#PCDATA)>
+  <!ELEMENT alu:apellidos (#PCDATA)>
+  <!ELEMENT alu:curso (#PCDATA)>
+  <!ELEMENT alu:telefono (#PCDATA)>
+]>
 <pa:instituto pa:especialidad="ciencias">
-
-    
-    <pa:pas xmlns:pas='http://es.peoplearesensitive.org/gente_sensible1'>
-        
-    <pa:nombre>Juanjo</pa:nombre>    
-    <pa:apellidos>Dido de la Cabeza</pa:apellidos>    
-    <pa:puesto>Loquero</pa:puesto>
-    <pa:tfno>Nokia</pa:tfno>
-    
-    </pa:pas>   
-
-</pa:instituto>
-        
-    <profes:profes xmlns:pro='http://es.profetasintierra.org/prof1'>
-    
-    <prof:nombre>Rebeca</prof:nombre>
-    <prof:apellidos>Gada del Monte</prof:apellidos>
-    <prof:asignatura>ciencias naturales</prof:asignatura>  
-    <prof:tfno>Samsung</prof:tfno>
-    
-    </profes:profes>    
-        
-    <alumno:alumno xmlns:alum='http://es.alumnoslumbreras.org/nombre_alumno1'>    
-        
-    <alum:nombre>Jaime</alum:nombre>
-    <alum:apellidos>Tepatas</alum:apellidos>
-    <alum:curso>1º preescolar</alum:curso>
-    <alum:tfno>LG Life is good</alum:tfno>    
-        
-    </alumno:alumno>    
- 
+    <pa:pas>
+        <pa:nombre>Juan</pa:nombre>
+        <pa:apellidos>Alonso Pérez</pa:apellidos>
+        <pa:puesto>Administativo</pa:puesto>
+        <pa:telefono>698521473</pa:telefono>
+    </pa:pas>
+    <pro:profesor>
+        <pro:nombre>Pedro</pro:nombre>
+        <pro:apellidos>López García</pro:apellidos>
+        <pro:asignatura>Matemáticas</pro:asignatura>
+        <pro:telefono>642198563</pro:telefono>
+    </pro:profesor>
+    <alu:alumno>
+        <alu:nombre>Nuria</alu:nombre>
+        <alu:apellidos>Gómez Pelayo</alu:apellidos>
+        <alu:curso>3º</alu:curso>
+        <alu:telefono>668785522</alu:telefono>
+    </alu:alumno>
 </pa:instituto>

@@ -1,32 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE ciudades_de_paises [ 
-    <!ELEMENT ciudades_de_paises (ciudad)*>
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ciudades [
+    <!ELEMENT ciudades (ciudad)*>
     <!ELEMENT ciudad (nombre, pais)>
     <!ELEMENT nombre (#PCDATA)>
     <!ELEMENT pais (#PCDATA)>
-    <!ATTLIST pais continente CDATA #REQUIRED>
-    <]
- >                           ]>
- <ciudades_de_paises> 
+        <!ATTLIST pais continente CDATA #REQUIRED>
+]>
+<ciudades>
     <ciudad>
-        <nombre>Nueva_Delhi</nombre>
-        <pais>India</pais>
-        <pais continente = "Asia">India</pais> 
+        <nombre>Nueva Delhi</nombre> 
+        <pais continente="Ásia">India</pais>
     </ciudad>
-              
-    
-
     <ciudad>
-        <nombre>Lisboa</nombre>
-        <pais>Portugal</pais>
-        <pais continente = "Europa">Portugal</pais> 
+        <nombre>Lisboa</nombre> 
+        <pais continente="Europa">Portugal</pais>
     </ciudad>
-     
-     
-     <ciudad>
-        <nombre>El Cairo</nombre>
-        <pais>Egipto</pais>
-        <pais continente = "Africa">Egipto</pais> 
-    </ciudad>      
-     
-</ciudades_de_paises>
+    <ciudad>
+        <nombre>El Cairo</nombre> 
+        <pais continente="África">Egipto</pais>
+    </ciudad>
+</ciudades>

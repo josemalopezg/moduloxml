@@ -1,30 +1,37 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE empresa [ 
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE empresa [
     <!ELEMENT empresa (empleado)*>
-    <!ELEMENT empleado (nombre, apellido+, numcontacto, email)>
+    <!ELEMENT empleado (nombre, apellido+, numcontacto, email, direccion)>
     <!ELEMENT nombre (#PCDATA)>
     <!ELEMENT apellido (#PCDATA)>
     <!ELEMENT numcontacto (#PCDATA)>
     <!ELEMENT email (#PCDATA)>
-                  ]
- >                           ]>
- <empresa> 
+    <!ELEMENT direccion (ciudad, provincia, cp)>
+    <!ELEMENT ciudad (#PCDATA)>
+    <!ELEMENT provincia (#PCDATA)>
+    <!ELEMENT cp (#PCDATA)>
+]>
+<empresa>
     <empleado>
-        <nombre>Jose_Manuel</nombre>
+            <nombre>Jose_Manuel</nombre>
             <apellido>López</apellido>
                 <numcontacto>637288165</numcontacto>
                 <email>politus_218@yahoo.es</email>
-    </empleado>
-              
-     
- 
-
-<empleado>
-        <nombre>Cintia</nombre>
-            <apellido>Diaz</apellido>
+                <direccion>
+                    <ciudad>Santander</ciudad>
+                    <provincia>Cantabria</provincia>
+                    <cp>39009</cp>
+                </direccion>
+        </empleado>
+          <empleado>
+                 <nombre>Cintia</nombre>
+                <apellido>Diaz</apellido>
                 <numcontacto>666666666</numcontacto>
                 <email>cinti@diaz.es</email>
-</empleado>
-              
-     
- </empresa>
+                <direccion>
+                    <ciudad>Santander</ciudad>
+                    <provincia>Cantabria</provincia>
+                    <cp>39009</cp>
+                </direccion>
+          </empleado>
+</empresa>

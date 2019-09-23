@@ -1,29 +1,53 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE factura [
-<!ELEMENT factura (datos_empresa, datos_cliente, datos_factura)>
-<!ATTLIST n_fac ID #REQUIRED>
-<!ELEMENT datos_empresa (nombre, dir, poblacion, provincia, cif, telefono?,fax?)>
-<!ELEMENT nombre (#PCDATA)>
-<!ELEMENT dir (#PCDATA)>
-<!ELEMENT poblacion (#PCDATA)>
-<!ATTLIST datos_empresa_cp #REQUIRED>
-<!ELEMENT provincia (#PCDATA)>
-<!ELEMENT cif (#PCDATA)>
-<!ATTLIST telefono EMPTY #FIXED>
-<!ELEMENT datos_cliente (nombre, dir, poblacion, provincia, cif, telefono)>
-<!ATTLIST n_cli ID #REQUIRED>
-<!ELEMENT datos_factura (fecha, linea*, ref, desc, cant, precio, importe, base, cuota_iva, total)>
-<!ELEMENT fecha (#PCDATA)>
-<!ELEMENT linea (#PCDATA)>
-<!ELEMENT ref (#PCDATA)>
-<!ELEMENT desc (#PCDATA)>
-<!ELEMENT cant (#PCDATA)>
-<!ELEMENT precio (#PCDATA)>
-<!ELEMENT importe (#PCDATA)>
-<!ELEMENT base (#PCDATA)>
-<!ELEMENT cuota_iva (#PCDATA)>
-<!ELEMENT total (#PCDATA)>
-                                    ]>
+  <!ELEMENT factura (emi:emisor, cli:cliente, detallesfactura)>
+    <!ATTLIST factura numero CDATA #REQUIRED>
+    <!ATTLIST factura fecha CDATA #REQUIRED>
+    <!ELEMENT emi:emisor (emi:nombre, emi:cif, emi:telefono)>
+      <!ATTLIST emi:emisor xmlns:emi CDATA #FIXED "http://www.alpeformacion.es/espacionombres/emisor">
+      <!ELEMENT emi:nombre (#PCDATA)>
+      <!ELEMENT emi:cif (#PCDATA)>
+      <!ELEMENT emi:telefono (#PCDATA)>
+    <!ELEMENT cli:cliente (cli:nombre, cli:cif, cli:telefono)>
+      <!ATTLIST cli:cliente xmlns:cli CDATA #FIXED "http://www.alpeformacion.es/espacionombres/cliente">
+      <!ELEMENT cli:nombre (#PCDATA)>
+      <!ELEMENT cli:cif (#PCDATA)>
+      <!ELEMENT cli:telefono (#PCDATA)>
+    <!ELEMENT detallesfactura (linea+)>
+      <!ATTLIST detallesfactura importe CDATA #REQUIRED>
+      <!ELEMENT linea (descripcion, cantidad, oferta?, pvp)>
+        <!ATTLIST linea codigo ID #REQUIRED>
+        <!ATTLIST linea tipo (Libro | DVD | Varios) #IMPLIED>
+        <!ELEMENT descripcion (#PCDATA)>
+        <!ELEMENT cantidad (#PCDATA)>
+        <!ELEMENT oferta EMPTY>
+        <!ELEMENT pvp (#PCDATA)>
+]>
+<factura numero="27" fecha="18/12/2013">
+  <emi:emisor>
+    <emi:nombre>Librería Pérez</emi:nombre>
+    <emi:cif>44555666B</emi:cif>
+    <emi:telefono>777888999</emi:telefono>
+  </emi:emisor>
+  <cli:cliente>
+    <cli:nombre>Biblioteca Txantrea</cli:nombre>
+    <cli:cif>33111222A</cli:cif>
+    <cli:telefono>333999444</cli:telefono>
+  </cli:cliente>
+  <detallesfactura importe="85 €">
+    <linea codigo="AW7" tipo="Libro">
+      <descripcion>Analítica Web 2.0</descripcion>
+      <cantidad>1</cantidad>
+      <oferta/>
+      <pvp>25 €</pvp>
+    </linea>
+    <linea codigo="CP5" tipo="DVD">
+      <descripcion>Curso de HTML</descripcion>
+      <cantidad>2</cantidad>
+      <pvp>30 €</pvp>
+    </linea>
+  </detallesfactura>
+</factura>
 
 
 

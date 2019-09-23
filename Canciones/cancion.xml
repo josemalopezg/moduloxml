@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<canciones>
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
     <cancion>
         <duracion></duracion>
         <anio></anio>
@@ -19,4 +19,4 @@
         <sello></sello>
         <interprete></interprete>
     </cancion>
-</canciones>
+
